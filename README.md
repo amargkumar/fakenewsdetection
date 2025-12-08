@@ -11,8 +11,6 @@ This project implements and compares multiple neural network architectures for d
 - **TextCNN**
 - **BiLSTM with Attention**
 - **BERT**
-- **BioBERT**
-- **PubMedBERT**
 
 Each model is tested with text-only and text+features configurations, incorporating sentiment analysis and linguistic feature engineering.
 
