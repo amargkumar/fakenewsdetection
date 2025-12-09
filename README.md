@@ -30,9 +30,7 @@ Each model is tested with text-only and text+features configurations, incorporat
   - Or combined dataset files
 
 ### 2. HealthFact Dataset
-- **Source**: Multiple options:
-  - https://github.com/neemakot/Health-Fact-Checking (HealthVer)
-  - https://github.com/clips/healthfc
+- **Source**: https://github.com/neemakot/Health-Fact-Checking (HealthVer)
 - **Description**: Health-related claims with fact-checking labels
 - **Download Instructions**:
   ```bash
@@ -47,10 +45,6 @@ Each model is tested with text-only and text+features configurations, incorporat
 3. Place them in the appropriate subdirectories
 4. The loaders will automatically detect and process them
 
-## Alternative: Sample Data
-
-If datasets are unavailable, sample data generators are provided in the loaders.
-
 ## Requirements
 
 - Python 3.8+
@@ -59,6 +53,18 @@ If datasets are unavailable, sample data generators are provided in the loaders.
 - NLTK, spaCy
 - scikit-learn
 - matplotlib, seaborn
+
+## Images
+
+analyze_feature_importance.py outputs
+  feature_importance_coaid.png
+  feature_importance_healthfact.png
+
+confusion_nobert.py outputs
+  confusion_matrices.png
+
+confusion_bert.py outputs
+  confusion_matricesbert.png
 
 ## Experiment Design
 
