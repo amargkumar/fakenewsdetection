@@ -14,60 +14,42 @@ This project implements and compares multiple neural network architectures for d
 
 Each model is tested with text-only and text+features configurations, incorporating sentiment analysis and linguistic feature engineering.
 
-## Project Structure
+## Datasets 
 
-```
-health_misinfo_detection/
-├── data/
-│   ├── raw/              # Original datasets
-│   ├── processed/        # Preprocessed datasets
-│   └── embeddings/       # Pre-trained embeddings (GloVe, Word2Vec)
-├── src/
-│   ├── data/
-│   │   ├── loaders.py
-│   │   ├── preprocessors.py
-│   │   └── datasets.py
-│   ├── features/
-│   │   ├── sentiment.py
-│   │   ├── linguistic.py
-│   │   └── embeddings.py
-│   ├── models/
-│   │   ├── base_model.py
-│   │   ├── ffnn.py
-│   │   ├── textcnn.py
-│   │   ├── bilstm_attention.py
-│   │   └── transformers.py
-│   ├── training/
-│   │   ├── trainer.py
-│   │   └── callbacks.py
-│   ├── evaluation/
-│   │   ├── metrics.py
-│   │   └── visualization.py
-│   └── utils/
-│       ├── config.py
-│       └── helpers.py
-├── experiments/
-│   └── configs/          # Experiment configuration files
-├── notebooks/            # Jupyter notebooks for exploration
-├── results/              # Model outputs and metrics
-└── main.py               # Entry point
-```
+### 1. CoAID Dataset (COVID-19 Healthcare Misinformation)
+- **Source**: https://github.com/cuilimeng/CoAID
+- **Description**: COVID-19 related claims, news articles, and social media posts
+- **Download Instructions**:
+  ```bash
+  # Clone the repository or download specific files
+  # Place files in: data/raw/coaid/
+  ```
+- **Files needed**:
+  - `NewsRealCOVID-19.csv`
+  - `NewsFakeCOVID-19.csv` 
+  - Or combined dataset files
 
-## Installation
+### 2. HealthFact Dataset
+- **Source**: Multiple options:
+  - https://github.com/neemakot/Health-Fact-Checking (HealthVer)
+  - https://github.com/clips/healthfc
+- **Description**: Health-related claims with fact-checking labels
+- **Download Instructions**:
+  ```bash
+  # Download CSV files
+  # Place in: data/raw/healthfact/
+  ```
 
-```bash
-pip install -r requirements.txt
-```
+## Manual Download Steps
 
-## Quick Start
+1. Visit the GitHub repositories above
+2. Download the CSV/JSON files
+3. Place them in the appropriate subdirectories
+4. The loaders will automatically detect and process them
 
-```bash
-# Train a BERT model on CoAID dataset
-python main.py --model bert --dataset coaid --features
+## Alternative: Sample Data
 
-# Cross-dataset evaluation
-python main.py --model biobert --train-data coaid --test-data healthfact
-```
+If datasets are unavailable, sample data generators are provided in the loaders.
 
 ## Requirements
 
@@ -80,9 +62,5 @@ python main.py --model biobert --train-data coaid --test-data healthfact
 
 ## Experiment Design
 
-The system evaluates 48 configurations:
-- 6 models × 2 input types × 2 training datasets × 2 test scenarios
-
-## License
-
-MIT License
+The system evaluates 24 configurations:
+- 4 models × 2 input types × 2 training datasets × 2 test scenarios
