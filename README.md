@@ -53,10 +53,10 @@ Each model is tested with text-only and text+features configurations, incorporat
 - scikit-learn
 - matplotlib, seaborn
 
-## Images
+## Figures
 
 analyze_feature_importance.py outputs
-  feature_importance_coaid.png
+  feature_importance_coaid.png and
   feature_importance_healthfact.png
 
 confusion_nobert.py outputs
