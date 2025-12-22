@@ -1,6 +1,6 @@
 # fakenewsdetection
 
-A Machine Learning Architecture for Detecting Fake Health Information
+A Machine Learning Architecture for Detecting Fake Health Information.
 
 ## Overview
 
