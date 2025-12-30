@@ -1,6 +1,6 @@
 # fakenewsdetection
 
-A Machine Learning Architecture for Detecting Fake Health Information.
+Fake health information poses a critical threat to public well-being, particularly during health crises like the COVID-19 pandemic when misinformation spreads rapidly across digital platforms. This project develops and evaluates multiple deep learning architectures including Feed-Forward Neural Networks, TextCNN, BiLSTM with Attention, and BERT to automatically detect health misinformation, comparing their performance on COVID-19 claims (CoAID dataset) and general health fact-checking data (HealthFact dataset).
 
 ## Overview
 
